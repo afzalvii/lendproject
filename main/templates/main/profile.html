@@ -1,0 +1,31 @@
+{% extends 'main/layouts.html' %}
+
+
+{% block content %}
+
+
+<div class="card" style="width: 13rem;">
+  <img class="card-img-top" src="..." alt="{{ user.username }}">
+  <div class="card-body">
+    <h5 class="card-title">Profile</h5>
+    <p class="card-text">  
+
+    	<label for='id_username'>Username:</label>
+        {{ user.username }}
+        {% for error in user.username.errors %}
+        <div class='alert alert-danger'>{{ error }}</div>
+     	{% endfor %}</p>
+
+     	<label for='id_email'>Email:</label>
+      	{{ user.email }}
+      	{% for error in user.email.errors %}
+        <div class='alert alert-danger'>{{ error }}</div>
+      	{% endfor %}
+
+    <a href="#" class="btn btn-primary">Account </a>
+  </div>
+</div>
+
+
+
+{% endblock %}

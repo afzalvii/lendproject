@@ -1,0 +1,13 @@
+{% extends 'main/layouts.html' %}
+
+{% block content %}
+
+	<h3><a href="/loan/{{post.id}}">{{post.LoanReason}}</a></h3>
+	<h6>on {{post.date}}</h6>
+	Need : {{post.Amount}}
+
+<div class="container">
+	{{post.body|safe|linebreaks}}
+</div>
+
+{% endblock %}
