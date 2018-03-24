@@ -146,3 +146,6 @@ SITE_ID = 1
 
 
 ACCOUNT_SIGNUP_FORM_CLASS = 'main.forms.SignupForm'
+
+LOGIN_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/profile'
